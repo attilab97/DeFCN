@@ -32,15 +32,15 @@ _config_dict = dict(
         TEST=("coco_2017_val",),
     ),
     SOLVER=dict(
-        CHECKPOINT_PERIOD=10000,
+        CHECKPOINT_PERIOD=5000,
         LR_SCHEDULER=dict(
-            MAX_ITER=270000,
-            STEPS=(210000, 250000),
+            MAX_ITER=200000,
+            STEPS=(150000, 200000),
         ),
         OPTIMIZER=dict(
             BASE_LR=0.01,
         ),
-        IMS_PER_BATCH=16,
+        IMS_PER_BATCH=512,
     ),
     INPUT=dict(
         AUG=dict(
@@ -56,10 +56,10 @@ _config_dict = dict(
         )
     ),
     TEST=dict(
-        EVAL_PEROID=10000,
+        EVAL_PEROID=5000,
     ),
     OUTPUT_DIR=osp.join(
-        '/data/Outputs/model_logs/cvpods_playground',
+        '/content/drive/MyDrive/Master/Disertatie',
         osp.split(osp.realpath(__file__))[0].split("playground/")[-1]),
 )
 
